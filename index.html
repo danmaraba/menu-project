@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -11,29 +11,37 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
     <title>Menu Project</title>
-</head>
-<body>
-    <main>
-        <!-- title -->
-        <h1>Menu Project</h1>
-        <!-- sub-titles -->
-        <div class="sub-titles">
-            <h3>All</h3>
-            <h3>Breakfast</h3>
-            <h3>Lunch</h3>
-            <h3>Dinner</h3>
-        </div>
-        <!-- menu-container -->
-        <div class="menu-container">
-            <article class="meal1">
-                <img src="./images/beverage.jpg" alt="beverage" class="beverage">
+  </head>
+  <body>
+    <main class="menu">
+      <!-- title -->
+      <h1 class="menu-project">Our Menu</h1>
+      <!-- filter buttons -->
+      <div class="sub-titles">
+        <button class="filter-btns" data-id="all">
+          All
+        </button>
+        <button class="filter-btns" data-id="breakfast">Breakfast</button>
+        <button class="filter-btns" data-id="lunch">Lunch</button>
+        <button class="filter-btns" data-id="dinner">Dinner</button>
+      </div>
+      <!-- menu-container -->
+      <div class="menu-container">
+        <article class="meal1">
+          <img src="./images/beverage.jpg" alt="beverage" class="beverage" />
+          <div>
+            <div class="item-price">
                 <h3>Beverage</h3>
-                <p>$50</p>
-                <p>Lorem ipsum dolor sit amet.</p>
-            </article>
-        </div>
+                <p class="price">$50</p>
+            </div>
+            <p class="description">Lorem ipsum dolor sit amet.</p>
+          </div>
+        </article>
+      </div>
     </main>
     <script src="./app.js"></script>
-</body>
+  </body>
 </html>
