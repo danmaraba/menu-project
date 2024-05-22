@@ -48,3 +48,5 @@ const menu=[
         }
     },
 ]
+// 
+const breakfastBtn=document.querySelector(".breakfast-btn");
