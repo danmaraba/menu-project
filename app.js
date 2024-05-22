@@ -50,14 +50,18 @@ const menu=[
 ]
 // select a button using selectors
 const breakfastBtn=document.querySelector(".breakfast-btn");
-const allbtn=document.querySelector(".all-btn");
+const filterBtns=document.querySelectorAll(".filter-btns");
 const lunchBtn=document.querySelector(".lunch-btn");
 const dinnerBtn=document.querySelector(".dinner-btn");
 const menuContainer=document.querySelector(".menu-container")
 
 // add an eventlistener
 window.addEventListener('DOMContentLoaded',function(){
-    let displayMenu=menu.map(function(item){
+    displayMenuItems(menu)
+})
+
+function displayMenuItems(menuItems){
+    let displayMenu=menuItems.map(function(item){
         return `<article class="meal1">
         <img src="${item.image}" alt="beverage" class="beverage" />
         <div>
@@ -72,10 +76,12 @@ window.addEventListener('DOMContentLoaded',function(){
     displayMenu=displayMenu.join("");
     menuContainer.innerHTML=displayMenu;
    console.log(displayMenu);
-})
-// function mapMenu(item){
-//     let array=[]
-//    return array[item]
-// }
 
-// console.log(mapMenu(menu));
+}
+
+// filter btns
+filterBtns.forEach(function(btn){
+    btn.addEventListener('click',function(e){
+        console.log(e.currentTarget.dataset.id);
+    })
+})
