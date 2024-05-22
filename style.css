@@ -4,6 +4,8 @@
 
 body{
     background:var(--body-color);
+    font-family: 'Tangerine', serif;
+    font-size:20px;
 }
 
 .menu{
@@ -15,6 +17,7 @@ body{
    font-size:20px;
    margin-top:6rem;
    margin-left:5rem;
+   font-size:48px;
 }
 
 .sub-titles{
