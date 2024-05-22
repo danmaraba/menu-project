@@ -162,7 +162,7 @@ body{
         border-radius:8px;
       }
 }
-@media(max-width:1920px){
+/* @media(max-width:1920px){
     .menu-container{
         display: flex;
         flex-wrap: wrap;
@@ -187,5 +187,5 @@ body{
         height:120px;
         border-radius:8px;
       }
-}
+} */
 
