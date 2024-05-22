@@ -1,0 +1,12 @@
+:root{
+    --body-color:#F39C12;
+}
+
+body{
+    background:var(--body-color);
+}
+
+.beverage{
+    width:100px;
+    height:80px;
+}
