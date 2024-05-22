@@ -50,3 +50,9 @@ const menu=[
 ]
 // 
 const breakfastBtn=document.querySelector(".breakfast-btn");
+const allbtn=document.querySelector(".all-btn");
+const lunchBtn=document.querySelector(".lunch-btn");
+const dinnerBtn=document.querySelector(".dinner-btn");
+breakfastBtn.addEventListener('click',function(){
+    console.log('clicked');
+})
