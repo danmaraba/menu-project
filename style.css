@@ -161,7 +161,7 @@ body{
         border-radius:8px;
       }
 }
-@media(min-width:1160px){
+@media(max-width:1160px){
     .menu-container{
         display: flex;
         flex-wrap: wrap;
