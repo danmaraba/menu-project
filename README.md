@@ -13,7 +13,7 @@ cd Reviews
 Use vscode to open it
 
 ## live link
-
+https://menu-project-six.vercel.app/
 ## Technologies Used
 HTML
 VanillaJs
