@@ -2,7 +2,7 @@ const menu=[
         {
             id:1,
             mealName:"Beverage",
-            category:"Breakfast",
+            category:"breakfast",
             image:"./images/beverage.jpg",
             price:'$20',
             description:"Lorem ipsum dolor sit amet."
@@ -10,7 +10,7 @@ const menu=[
         {
             id:2,
             mealName:"French Toast",
-            category:"Breakfast",
+            category:"breakfast",
             image:"./images/french toast.jpg",
             price:'$65',
             description:"Lorem ipsum dolor sit amet."
@@ -18,7 +18,7 @@ const menu=[
         {
             id:3,
             mealName:"Beef Curry",
-            category:"Lunch",
+            category:"lunch",
             image:"./images/beef curry.jpg",
             price:'$15',
             description:"Lorem ipsum dolor sit amet."
@@ -26,7 +26,7 @@ const menu=[
         {
             id:4,
             mealName:"Fried Rice",
-            category:"Lunch",
+            category:"lunch",
             image:"./images/friedrice.jpg",
             price:'$25',
             description:"Lorem ipsum dolor sit amet."
@@ -34,7 +34,7 @@ const menu=[
         {
             id:5,
             mealName:"Meat Ball",
-            category:"Dinner",
+            category:"dinner",
             image:"./images/meatball.jpg",
             price:'$30',
             description:"Lorem ipsum dolor sit amet."
@@ -42,17 +42,14 @@ const menu=[
         {
             id:6,
             mealName:"Salmon",
-            category:"Dinner",
+            category:"dinner",
             image:"./images/salmon.jpg",
             price:'$40',
             description:"Lorem ipsum dolor sit amet."
         }
 ]
 // select a button using selectors
-const breakfastBtn=document.querySelector(".breakfast-btn");
 const filterBtns=document.querySelectorAll(".filter-btns");
-const lunchBtn=document.querySelector(".lunch-btn");
-const dinnerBtn=document.querySelector(".dinner-btn");
 const menuContainer=document.querySelector(".menu-container")
 
 // add an eventlistener
@@ -82,6 +79,17 @@ function displayMenuItems(menuItems){
 // filter btns
 filterBtns.forEach(function(btn){
     btn.addEventListener('click',function(e){
-        console.log(e.currentTarget.dataset.id);
+        const category=e.currentTarget.dataset.id;
+        const menuCategory=menu.filter(function(menuItem){
+            if(menuItem.category===category){
+                return menuItem
+            }
+        })
+        // console.log(menuCategory);
+        if(category==='all'){
+            displayMenuItems(menu)
+        } else{
+            displayMenuItems(menuCategory)
+        }
     })
 })
